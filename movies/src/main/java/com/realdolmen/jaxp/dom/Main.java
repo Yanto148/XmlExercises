@@ -30,7 +30,7 @@ public class Main
     	Integer random;
     	for (int i = 0; i < movies.getLength(); i++)
     	{
-    		random = randomGenerator.nextInt(6);
+    		random = randomGenerator.nextInt(5) + 1;
     		String randomStr = random.toString();
     		
     		Element score = document.createElement("score");

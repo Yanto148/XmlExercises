@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.realdolmen.com/movies"
+	xmlns:tns="http://www.realdolmen.com/movies" elementFormDefault="qualified">
+	<element name="movies">
+		<complexType>
+			<sequence>
+				<element ref="tns:movie" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="movie">
+		<complexType>
+			<sequence>
+				<element name="title" type="string" />
+				<element name="type" type="string" />
+				<element name="format" type="string" />
+				<element name="score" type="tns:scoreType" />
+				<element name="description" type="string" />
+				<element ref="tns:comment"></element>
+
+			</sequence>
+		</complexType>
+	</element>
+	<simpleType name="scoreType">
+		<restriction base="int">
+			<minInclusive value="0"></minInclusive>
+			<maxInclusive value="5"></maxInclusive>
+		</restriction>
+	</simpleType>
+	<element name="comment">
+		<complexType>
+			<sequence>
+				<element name="user" type="string"></element>
+				<element name="content" type="string"></element>
+				<element name="date" type="date"></element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

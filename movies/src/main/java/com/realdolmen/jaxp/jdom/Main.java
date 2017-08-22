@@ -36,7 +36,7 @@ public class Main {
 		Element content = new Element("content");
 		content.setText("Mega awesome movie, must watch!!!");
 		Element date = new Element("date");
-		date.setText("21/05/1989");
+		date.setText("1989-05-21");
 		
 		comment.addContent(user);
 		comment.addContent(content);
